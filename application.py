@@ -1,11 +1,11 @@
 import os
 
 def main():
-	print("/t/t/t/t Welcome to Docker to ALL ")
+	print("			Welcome to Docker to ALL ")
 	input()
 	print("I'm Doc Doc and I would like to be you assistant ")
 	input()
-	print("""/tActually I can a lot of things ( mostly Basic ) 
+	print("""		Actually I can a lot of things ( mostly Basic ) 
 		so kindly choose the operation you want to do
 		To see the list of operations that can be performed
 			press Enter
