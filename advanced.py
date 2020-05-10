@@ -8,7 +8,7 @@ def main():
 			menu()
 			count+=1
 		value=input("enter the respective operation you want to perform: ")
-		end=bool(opeartion(value,count))
+		end=bool(operation(value,count))
 
 
 def menu():
