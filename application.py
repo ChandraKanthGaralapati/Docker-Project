@@ -23,8 +23,8 @@ def mainmenu():
 		basic()
 	elif level=='a':
 		advance()
-	elif level=='e':
-		expert()
+	#elif level=='e':
+	#	expert()
 	else:
 		print("Wrong Input")
 
@@ -35,8 +35,8 @@ def basic():
 def advanced():
 	os.system('python3 ./advanced.py')
 
-def expert():
-	os.system('python3 ./expert.py')
+#def expert():
+#	os.system('python3 ./expert.py')
 
 if __name__ == '__main__':
     main()
