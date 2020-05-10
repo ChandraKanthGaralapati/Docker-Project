@@ -1,14 +1,15 @@
 import os
 
+
 def main():
 	end=True
 	count=0
 	while end:
 		if count==0:
 			menu()
-			count+=1
+			count+=1	
 		value=input("enter the respective operation you want to perform: ")
-		end=bool(operation(value,count))
+		end=bool(operation(value))
 
 
 def menu():
@@ -33,35 +34,45 @@ def menu():
 		''')
 
 
-def operation(i,j):
+def operation(i):
 	if i == '1':
 		name=input("Enter the name of the image: ")
 		os.system('docker history {0}'.format(name))
+	
 	elif i == '2':
 		os.system('netstat -tnlp')
+	
 	elif i == '3':
 		os.system('docker network ls')
+	
 	elif i == '4':
 		driver=input("Enter the driver name to use: ")
 		subnet=input("Enter the subnet to use: ")
 		name=input("Enter the name of the network: ")
 		os.system('docker network create --driver {0} --subnet {1}/16 {2}'.format(driver,subnet,name))
+	
 	elif i == '5':
 		name=input("Enter the name of the network: ")
 		os.system('docker network rm {0}'.format(name))
+		
 	elif i == '6':
 		os.system('docker volume ls ')
+	
 	elif i == '7':
 		name=input("Enter the name of the volume: ")
 		os.system('docker volume create {}'.format(name))
+	
 	elif i == '8':
 		name=input("Enter the name of the volume: ")
 		os.system('docker volume rm {}'.format(name))
+	
 	elif i == '0':
 		name=input("Enter the name of the container: ")
 		os.system('docker logs {0}'.format(name))
+	
 	elif i == 'c':
 		os.system('clear')
+	
 	elif i == 'e':
 		return 0
 	
@@ -69,10 +80,12 @@ def operation(i,j):
 		os.system('cat readme.txt')
 	
 	elif i == 'm':
-		j=0
+		menu()
 	
 	elif i == 's':
 		print('Ctrl + C to exit from the operation')
+		print()
+		print()
 		os.system('systemctl status docker.service')
 	
 	elif i == 'v':
@@ -84,5 +97,7 @@ def operation(i,j):
 	input()
 	return 1
 
-if __name__ == '__main__':
-    main()
+
+
+if __name__=="__main__":
+	main()
