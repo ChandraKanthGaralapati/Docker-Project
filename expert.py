@@ -61,7 +61,14 @@ def operation(i):
 		print("making it executable")
 		os.system('sudo chmod +x /usr/local/bin/docker-compose ')
 	elif i == '5':
-		os.system('docker-compose -d up')
+		print(" This project uses the port no. 8085 by default you can change it in the docker-compose.yml file")
+		print("Then if you want to access your website of wordpress created ")
+		print("you can refer to the (IPAddress of your system):8085 in your web browser")
+		print("Press Enter to continue")
+		input()
+		print()
+		print()
+		os.system('docker-compose up')
 	elif i == '6':
 		os.system('docker build -t mypython:v1 ./Centos+python')
 		os.system('docker run -it mypython:v1')
